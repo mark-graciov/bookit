@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My awesome bookit page</title>
+</head>
+<body>
+<h1>HELLOOOOOOOOOOOOOOO</h1>
+<h2>Our Tales:</h2>
+
+{% for tale in tale_list %}
+<div>
+	<div>{{tale.title}}</div>
+	<div>{{tale.about}}</div>
+</div>
+{% endfor %}
+
+</body>
+</html>

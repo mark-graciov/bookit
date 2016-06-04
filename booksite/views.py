@@ -9,6 +9,6 @@ def tale_list(request):
 
 
 def create_book(request, tale_id):
-	tale=Tales.objects.get(id=id)
+	tale=Tale.objects.get(id=tale_id)
 	return render(request, 'booksite/create_book.html', {"tale":tale})
 

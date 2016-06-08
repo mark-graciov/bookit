@@ -2,9 +2,11 @@
 	background-repeat: no-repeat;
 
 }
-
+.header2 {
+	background-color: #ffffff;
+}
 .header {
-	background-color: #f1ba48;
+	background-color: #ebb582;
 }
 .imagine {
 	background-image: url(http://brandthunder.com/wp/wp-content/uploads/2015/08/minions-movie-2015-team-photo-hd-wallpaper-t2.jpg)
@@ -25,8 +27,8 @@
 }
 
 .littleimg {
-	height: 50%;
-	width: 50%
+	height: 70%;
+	width: 70%
 }
 
 .logo {

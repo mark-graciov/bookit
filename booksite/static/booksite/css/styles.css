@@ -6,7 +6,7 @@
 	background-color: #ffffff;
 }
 .header {
-	background-color: #ebb582;
+	background-color: #E8A86C;
 }
 .imagine {
 	background-image: url(http://brandthunder.com/wp/wp-content/uploads/2015/08/minions-movie-2015-team-photo-hd-wallpaper-t2.jpg)
@@ -27,8 +27,8 @@
 }
 
 .littleimg {
-	height: 70%;
-	width: 70%
+	height: 90%;
+	width: 90%
 }
 
 .logo {
@@ -55,6 +55,13 @@
 	height: 100%;
 }
 
+.handwritten {
+	font-family: "Josefin Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 30px;
+}
 .book {
 	margin-top: 6px;
 	margin-bottom: 20px;
@@ -98,7 +105,4 @@
 	margin-top: 80px;
 }
 
-.handwritten {
-	font: 400 3.5em/125% 'Leckerli One', Helvetica, Sans-serif;
-	color: #333;
-}
+

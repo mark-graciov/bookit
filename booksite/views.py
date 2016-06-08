@@ -8,7 +8,7 @@ def tale_list(request):
 	return render(request, 'booksite/index.html', {'tale_list' : tale_list})
 
 
-def create_book(request, tale_id):
+def create_tale(request, tale_id):
 	tale=Tale.objects.get(id=tale_id)
-	return render(request, 'booksite/create_book.html', {"tale":tale})
+	return render(request, 'booksite/create_tale.html', {"tale":tale})
 

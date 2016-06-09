@@ -14,6 +14,37 @@
   <link rel="stylesheet" type="text/css" href= {% static "booksite/css/styles.css" %}
   <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
 
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E8A86C;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 3px 4px;
+    margin-left:90px;
+    margin-right:90px;
+    text-decoration: none;
+}
+
+a:hover:not(.active) {
+    background-color: #E8A86C;
+}
+
+.active {
+background-color:#E8A86C;
+}
+</style>
 
 
 </head>
@@ -44,20 +75,12 @@
 
   <div class="header">
     <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <img src="logou.jpg" class="littleimg logo">
-        </div>
-        <div class="col-md-6">
-          
-        </div>
-        <div class="col-md-1">
-          
-        </div>
-        <div class="col-md-2">
-          
-        </div>
-      </div>   
+      <ul>
+  		<li><a class="active" href="#home">           <h4>Despre noi</h4>           </a></li>
+  		<li><a href="#news">           <h4>Galerie</h4>          </a></li>
+  		<li><a href="#contact">       <h4>Creează cartea</h4>       </a></li>
+  		<li><a href="#about">         <h4>Contacte</h4>          </a></li>
+	  </ul>
     </div> 
   </div>
 

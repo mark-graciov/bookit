@@ -9,21 +9,13 @@
         <img src={{tale.image_path}} class="full-height">
       </div>
       <div class="col-md-8 full-height">
-        <div class="book-text">
-          <div class="book-btn text-left">
-           <div class=book-title> {{tale.title}}</div>
-           <div> {{tale.about}}</div>
-
-           <div>
-             <div class="book-btn text-right">
-
-             <a href="/create-book/{{tale.id}}"  class="btn btn-success btn-lg">Creeaza cartea<button></a>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
+        <div class="book-title">{{tale.title}}</div>
+        <div class="book-text">{{tale.about}}</div>
+		<div class="book-btn text-right">
+			<a href="/create-book/{{tale.id}}"  class="btn btn-success btn-lg">Creeaza cartea</a>
+        </div>
+      </div>
+    </div>
    {% endfor %}
    
 {% endblock %}

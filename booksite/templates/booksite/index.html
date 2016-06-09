@@ -6,13 +6,13 @@
 
     <div class="row book">
       <div class="col-md-4 full-height">
-        <img src={{tale.image_path}} class="full-height">
+        <img src={{Tale.image_path}} class="full-height">
       </div>
       <div class="col-md-8 full-height">
-        <div class="book-title">{{tale.title}}</div>
-        <div class="book-text">{{tale.about}}</div>
+        <div class="book-title">{{Tale.title}}</div>
+        <div class="book-text">{{Tale.about}}</div>
 		<div class="book-btn text-right">
-			<a href="/create-book/{{tale.id}}"  class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Creeaza cartea</a>
+			<a href="/create-book/{{Tale.id}}"  class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Creeaza cartea</a>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
         <div class="modal-body">
             <p>Some text in the modal.</p>
 
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			  <!-- Indicators -->
 			  <ol class="carousel-indicators">
 			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>

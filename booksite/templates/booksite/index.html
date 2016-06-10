@@ -2,21 +2,28 @@
 
 {% block content %}
 
-    {% for Tale in tale_list %}
+      
 
-    <div class="row book">
-      <div class="col-md-4 full-height">
-        <img src={{Tale.image_path}} class="full-height">
-      </div>
-      <div class="col-md-8 full-height">
-        <div class="book-title">{{Tale.title}}</div>
-        <div class="book-text">{{Tale.about}}</div>
-		<div class="book-btn text-right">
-			<a href="/create-book/{{Tale.id}}"  class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Creeaza cartea</a>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="myModal" role="dialog">
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+      	{% for Tale in tale_list %}
+
+        <div class="col-lg-4 book-vertical">
+          <img src={{Tale.image_path}} alt="Generic placeholder image" height="350">
+          <div class="space20"></div>
+          <div class="book-title">{{Tale.title}}</div>
+          <div class="book-text">{{Tale.about}}</div>
+          <div class="book-btn text-center">
+			<a href="/create-book/{{Tale.id}}"  class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Creeaza cartea &raquo;</a>
+          </div>
+        </div><!-- /.col-lg-4 -->
+        
+        {% endfor%}
+    </div><!-- /.row -->
+
+<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-lg">
     
       
@@ -174,11 +181,30 @@
       </div>
       
     </div>
-  </div>
-   {% endfor %}
+</div>
    
+
+	
+	<div class="space100"></div>
+
+
+	{% for Tale in tale_list %}
+
+    <div class="row book">
+      <div class="col-md-4 full-height">
+        <img src={{Tale.image_path}} class="full-height">
+      </div>
+      <div class="col-md-8 full-height">
+        <div class="book-title">{{Tale.title}}</div>
+        <div class="book-text">{{Tale.about}}</div>
+		<div class="book-btn text-right">
+			<a href="/create-book/{{Tale.id}}"  class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Creeaza cartea</a>
+        </div>
+      </div>
+    </div>
+    
+   {% endfor %}
+
+
 {% endblock %}
-
-
-
  

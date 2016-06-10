@@ -3,7 +3,7 @@ from django.utils import timezone
 
 class Tale(models.Model):
 	title = models.CharField(max_length=200)
-	about = models.TextField()
+	about = models.TextField(max_length=1000)
 	image_path = models.CharField(max_length=200)
 	pdf_path = models.CharField(max_length=200)
 	created_date = models.DateTimeField(default=timezone.now)

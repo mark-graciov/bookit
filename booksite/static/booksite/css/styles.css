@@ -76,23 +76,31 @@
 	height: 100%;
 }
 
-.handwritten {
-	font-family: "Josefin Sans";
-    font-weight: 400;
-    font-style: normal;
-    font-size: 36px;
-    line-height: 30px;
-}
+
 .book {
 	margin-top: 28px;
 	margin-bottom: 16px;
+	margin-left: 12px;
+	margin-right: 12px;
 	border: 1px solid #AAAAAA;
 	padding: 8px;
 	height:410px;
-
+} 
+.book-vertical {
+	margin-top: 28px;
+	margin-bottom: 16px;
+	padding: 8px;
+	height:550px;
 } 
 
 .book:hover {
+	cursor: pointer;
+	background-color: #EEEEEE;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.book-vertical:hover {
 	cursor: pointer;
 	background-color: #EEEEEE;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -103,12 +111,11 @@
 
 
 .book-text {
-	height: 80%;
-	padding-top: 10px;
+	padding: 15px;
 }
 .book-title {
 	font-size: 1.8em;
-	font-wide:bold;
+	font-weight: bold;
 }
 
 .text-left {
@@ -117,7 +124,7 @@
 
 .btn {
 	height: 20%;
-	margin-bottom:20px;
+	
 }
 .booksize {
 	height: 150%;
@@ -130,4 +137,21 @@
 
 .radio-inline {
 	margin-left:16px;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
 }

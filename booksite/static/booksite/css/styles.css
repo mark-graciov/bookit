@@ -8,9 +8,8 @@
 .header {
 	background-color: #E8A86C;
 }
-.imagine {
-	background-image: url(http://brandthunder.com/wp/wp-content/uploads/2015/08/minions-movie-2015-team-photo-hd-wallpaper-t2.jpg)
-}
+
+
 
 .color {
 	background-color: #CDCDCD;
@@ -50,7 +49,23 @@
 
 
 .modal-title {
+	color: #D19761;
+	font-weight: bold;
+}
+/* text size in modal box*/
+.control-label{
+	font-size:110%;
+}
 
+.form-horizontal {
+	margin-top:15px;
+
+}
+.space20 {
+	margin-top:20px;
+}
+.space100 {
+	margin-bottom:100px;
 }
 
 .test-border {
@@ -96,12 +111,13 @@
 	font-wide:bold;
 }
 
-.text-right {
-
+.text-left {
+	margin-left:220px;
 }
 
-.book-btn {
+.btn {
 	height: 20%;
+	margin-bottom:20px;
 }
 .booksize {
 	height: 150%;
@@ -112,3 +128,6 @@
 }
 
 
+.radio-inline {
+	margin-left:16px;
+}

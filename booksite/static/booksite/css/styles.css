@@ -47,7 +47,10 @@
 
 }
 
-
+.img60 {
+	height:60%;
+	width:60%;
+}
 .modal-title {
 	color: #D19761;
 	font-weight: bold;

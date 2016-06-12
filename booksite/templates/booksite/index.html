@@ -51,7 +51,7 @@
 
 		<div class="col-lg-4 book-vertical">
 			<a class="nolink" data-toggle="modal" href="/tale-details/{{tale.id}}" data-target="#taleDetailsDlg">
-				<img src={{tale.image_path}} alt="Generic placeholder image" height="350">
+				<img src=/static/{{tale.image_path}} alt="Generic placeholder image" height="350">
 				<div class="space20"></div>
 				<div class="book-title">{{tale.title}}</div>
 				<div class="book-text">{{tale.about}}</div>
@@ -64,14 +64,17 @@
 		{% endfor%}
 	</div><!-- /.row -->
 
+
+	<!-- Tale details dialog -->
 	<div id="taleDetailsDlg" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				BLA BLA BLA           
 			</div>
-			<!-- /.modal-content -->
 		</div>
 	</div>
+
+
 
 	<!-- TO REMOVE -->
 

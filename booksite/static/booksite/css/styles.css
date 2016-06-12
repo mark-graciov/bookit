@@ -158,3 +158,10 @@
   margin-right: 10px;
   margin-left: 10px;
 }
+
+/**/
+.nolink, .nolink:hover, .nolink:active, .nolink:focus {
+	text-decoration: none;
+	outline: 0;
+	color: #333;
+}

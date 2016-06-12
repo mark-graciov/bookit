@@ -3,4 +3,4 @@ from .models import Tale
 
 admin.site.register(Tale)
 
-# Register your models here.
+# Register your models her

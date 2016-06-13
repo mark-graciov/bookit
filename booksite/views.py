@@ -31,3 +31,4 @@ def tale_details(request, tale_id):
 def create_tale(request, tale_id):
     tale=Tale.objects.get(pk=tale_id)
     return render(request, 'booksite/create_tale.html', {"tale" : tale})
+

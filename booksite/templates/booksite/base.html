@@ -1,63 +1,59 @@
 {% load staticfiles %}
-
 <!DOCTYPE html>
 <html lang="ro-RO">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bookit</title>
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href= {% static "booksite/css/styles.css" %}>
-        
-  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href='{% static "booksite/css/styles.css" %}'>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> <!--for the modal box -->
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #E8A86C;
+        }
 
-<style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #E8A86C;
-}
+        li {
+            float: left;
+        }
 
-li {
-    float: left;
-}
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 3px 4px;
+            margin-left: 90px;
+            margin-right: 90px;
+            text-decoration: none;
+        }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 3px 4px;
-    margin-left:90px;
-    margin-right:90px;
-    text-decoration: none;
-}
+        a:hover:not(.active) {
+            background-color: #E8A86C;
+        }
 
-a:hover:not(.active) {
-    background-color: #E8A86C;
-}
-
-.active {
-background-color:#E8A86C;
-}
-</style>
-
-
+        .active {
+            background-color: #E8A86C;
+        }
+    </style>
 </head>
-<body style="background-color: #e6eff3 body">
 
-  <div class="header2">
+<body style="background-color: #e6eff3">
+
+<div class="header2">
     <div class="container">
+<<<<<<< HEAD
       <div class="row">
         
         <div class="col-md-3">
@@ -66,49 +62,54 @@ background-color:#E8A86C;
         	</a>
         </div>
         <div class="col-md-1">
-        </div>
-        <div class="col-md-5">
-          
-        </div>
-        <div class="col-md-1">
-          <a href="#">RO RU</a>
-        </div>
-        <div class="col-md-2">
-          <a href="login.html">LOGIN</a>
-        </div>
-      </div>   
-      
-    </div>
-  </div>
+=======
+        <div class="row">
 
+            <div class="col-md-3">
+                <img src="{% static 'booksite/img/logo.jpg' %}" class="littleimg logo">
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+
+            </div>
+            <div class="col-md-1">
+                <a href="#">RO RU</a>
+            </div>
+            <div class="col-md-2">
+                <a href="login">LOGIN</a>
+            </div>
+>>>>>>> origin/master
+        </div>
+
+<<<<<<< HEAD
   
+=======
+    </div>
+</div>
+>>>>>>> origin/master
 
 
-  <div class="header">
+<div class="header">
     <div class="container">
-      <ul>
-  		<li><a class="active" href="#home"><h4>Despre noi</h4></a></li>
-  		<li><a href="#galerie"><h4>Galerie</h4></a></li>
-  		<li><a href="#creeaza"><h4>Creează cartea</h4></a></li>
-  		<li><a href="#contacte"><h4>Contacte</h4></a></li>
-	  </ul>
-    </div> 
-  </div>
+        <ul>
+            <li><a class="active" href="#home"><h4>Despre noi</h4></a></li>
+            <li><a href="#galerie"><h4>Galerie</h4></a></li>
+            <li><a href="#creeaza"><h4>Creează cartea</h4></a></li>
+            <li><a href="#contacte"><h4>Contacte</h4></a></li>
+        </ul>
+    </div>
+</div>
 
 
-  <div class="container">
-   {% block content %}
-
-   {% endblock %} 
- 
-
-
+<div class="container">
+    {% block content %}
+        <h1>Insert your content here</h1>
+    {% endblock %}
+</div>
 
 
-  </div>
-
-
-
+<<<<<<< HEAD
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
          <!-- bootstrap java script -->
@@ -133,5 +134,13 @@ background-color:#E8A86C;
   		 </script>
 
 
+=======
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<!-- bootstrap java script -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+>>>>>>> origin/master
 </body>
 </html>

@@ -1,6 +1,7 @@
 {% extends 'booksite/base.html' %}
 
 {% block content %}
+<<<<<<< HEAD
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	<!-- Indicators -->
 	<ol class="carousel-indicators">
@@ -233,3 +234,244 @@
 	</div>
 
 	{% endblock %}
+=======
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="http://i.huffpost.com/gen/1685584/images/o-READING-WITH-KIDS-facebook.jpg" alt="...">
+                <div class="carousel-caption">
+                    <h3>Caption Text</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://placehold.it/1200x315" alt="...">
+                <div class="carousel-caption">
+                    <h3>Caption Text</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://placehold.it/1200x315" alt="...">
+                <div class="carousel-caption">
+                    <h3>Caption Text</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div> <!-- Carousel -->
+
+    <div class="space100"></div>
+
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            {% for tale in tale_list %}
+
+                <div class="col-lg-4 book-vertical">
+                    <a class="nolink" data-toggle="modal" href="/tale-details/{{ tale.id }}"
+                       data-target="#taleDetailsDlg">
+                        <img src="/static/{{ tale.image_path }}" alt="Generic placeholder image" height="350">
+                        <div class="space20"></div>
+                        <div class="book-title">{{ tale.title }}</div>
+                        <div class="book-text">{{ tale.about }}</div>
+                        <div class="book-btn text-center">
+                            <a href="/create-tale/{{ tale.id }}" class="btn btn-success btn-lg">Creeaza
+                                cartea &raquo;</a>
+                        </div>
+                    </a>
+                </div><!-- /.col-lg-4 -->
+
+            {% endfor %}
+        </div><!-- /.row -->
+    </div>
+
+    <!-- Tale details dialog -->
+    <div id="taleDetailsDlg" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                BLA BLA BLA
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- TO REMOVE -->
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title text-center">Ajută-ne să creăm cartea ta!</h2>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Casete-->
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Eu sunt</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                mamă/tată
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                bunel/bunică
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> rudă
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> altul
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Cartea va fi pentru</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> o fată
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> un
+                                băiat
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Numele copilului</label>
+                            <div class="col-sm-3">
+                                <textarea class="form-control" rows="1"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Vîrsta copilului</label>
+                            <div class="col-sm-2">
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10+</option>
+                                </select>
+                            </div>
+                            <h5>an/ani</h5>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Culoarea ochilor</label>
+                            <div class="col-sm-2">
+                                <select class="form-control">
+                                    <option>căprui</option>
+                                    <option>verzi</option>
+                                    <option>albaştri</option>
+                                    <option>gri</option>
+                                    <option>negri</option>
+                                    <option>frumoşi</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Culoarea părului</label>
+                            <div class="col-sm-2">
+                                <select class="form-control">
+                                    <option>castaniu</option>
+                                    <option>brunet</option>
+                                    <option>şaten</option>
+                                    <option>roşcat</option>
+                                    <option>blond</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                            <div class="col-sm-7">
+                                <input type="email" class="form-control" id="inputEmail3"
+                                       placeholder="Introdu email-ul tău, ca să-ţi putem expedia cartea">
+                            </div>
+                        </div>
+
+
+                        <div class="book-btn text-left">
+                            <a class="btn btn-success btn-lg space20">Salvează</a>
+                        </div>
+
+                        <div class="space100">
+                        </div>
+                    </form>
+
+
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="http://placehold.it/1200x315" alt="...">
+                                <div class="carousel-caption">
+                                    <h3>Caption Text</h3>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="http://placehold.it/1200x315" alt="...">
+                                <div class="carousel-caption">
+                                    <h3>Caption Text</h3>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="http://placehold.it/1200x315" alt="...">
+                                <div class="carousel-caption">
+                                    <h3>Caption Text</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                           data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                           data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div> <!-- Carousel -->
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+>>>>>>> origin/master

@@ -2,6 +2,7 @@ import os
 
 from django.conf import settings
 from django.shortcuts import render
+from django.contrib.staticfiles import finders
 from .models import Tale
 
 
@@ -16,12 +17,13 @@ def tale_details(request, tale_id):
     tale = Tale.objects.get(pk=tale_id)
 
     preview_dir = os.path.join(os.path.dirname(tale.pdf_path), 'preview')
-    preview_path = os.path.join(settings.BASE_DIR, 'booksite/static', preview_dir)
+    preview_path = os.path.dirname(finders.find(tale.pdf_path))
+    preview_path = os.path.join(preview_path, 'preview')
 
     img_paths = []
     for (dirpath, dirnames, filenames) in os.walk(preview_path):
         for filename in filenames:
-            img_paths.append(os.path.join(settings.STATIC_URL, preview_dir, filename))
+            img_paths.append(os.path.join(preview_dir, filename))
         break
 
     return render(request, 'booksite/tale_details.html', {'tale': tale, 'img_paths': img_paths})

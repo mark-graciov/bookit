@@ -31,9 +31,19 @@
 /* END MENU */
 
 
-.body {
-    background-image: /static/booksite/img/nuages.gif;
+.white-box {
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid #b4bec2
+}
 
+.create-form {
+    padding: 20px;
+}
+
+.body {
+    background-image: url('../img/nuage1.png');
 }
 
 .header2 {

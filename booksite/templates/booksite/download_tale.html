@@ -1,0 +1,9 @@
+{% extends 'booksite/base.html' %}
+
+{% block content %}
+
+    <h1 class="text-center">{{ tale.title }}</h1>
+
+    <h2>Va multumim ... </h2>
+    <a class="btn btn btn-success btn-lg" href="{% url 'download_tale_doc' s_id %}">Descarca Povestea</a>
+{% endblock %}

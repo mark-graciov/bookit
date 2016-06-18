@@ -1,13 +1,20 @@
-import os
-import re
 import ast
+import os
+import string
+from wsgiref.util import FileWrapper
 
 from django.conf import settings
 from django.contrib.staticfiles import finders
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from docx import Document
+from django.utils.crypto import random
+from .docx import read_docx_tags, replace_docx_tags
 from .forms import TaleForm
 from .models import Tale, TaleTag
+
+
+def _random_id():
+    return ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(10))
 
 
 def tale_list(request):
@@ -41,17 +48,17 @@ def create_tale(request, tale_id):
         form = TaleForm(request.POST, fields=fields)
 
         if form.is_valid():
-            # do something
-            return redirect('generate_tale', tale_id)
-    else:
-        doc = Document(finders.find(tale.doc_path))
-        pattern = re.compile(r'<([a-zA-Z0-9_]+)>')
+            r_id = _random_id()
+            while r_id in request.session:
+                r_id = _random_id()
 
-        tags = []
-        for p in doc.paragraphs:
-            matches = re.findall(pattern, p.text)
-            tags.extend(matches)
-        tags = set(tags)
+            values = form.collect()
+            request.session[r_id] = (tale_id, values)
+            tale.downloads += 1
+            tale.save()
+            return redirect('download_tale', r_id)
+    else:
+        tags = read_docx_tags(finders.find(tale.doc_path))
 
         defined = TaleTag.objects.filter(name__in=tags).order_by('id')
         fields = []
@@ -65,3 +72,24 @@ def create_tale(request, tale_id):
         form = TaleForm(fields=fields)
 
     return render(request, 'booksite/create_tale.html', {'tale': tale, 'form': form, 'fields': str(fields)})
+
+
+def download_tale(request, s_id):
+    s_tuple = request.session[s_id]
+    tale = Tale.objects.get(pk=s_tuple[0])
+
+    return render(request, 'booksite/download_tale.html', {'tale': tale, 's_id': s_id})
+
+
+def download_tale_doc(request, s_id):
+    s_tuple = request.session[s_id]
+    tale = Tale.objects.get(pk=s_tuple[0])
+    values = s_tuple[1]
+
+    file = replace_docx_tags(finders.find(tale.doc_path), values)
+    wrapper = FileWrapper(file)
+    response = HttpResponse(wrapper, content_type='application/docx')
+    response['Content-Disposition'] = 'attachment; filename=' + os.path.basename(tale.doc_path)
+    response['Content-Length'] = file.tell()
+    file.seek(0)
+    return response

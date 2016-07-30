@@ -12,9 +12,15 @@ nav{
     font-family: 'Lucida Console';
     font-size: 14pt;
     font-style: bold;
+    height: 39px;
+}
+.logo {
+    text-indent: -999999px;
+    height: 105px;
 }
 #container{
     width: 1000px;
+
 }
 
 /* languages */
@@ -22,10 +28,11 @@ nav{
     background-image: url(../flags/1x1/ro.svg);
 }
 
+
 .menu {
     
     overflow: hidden;
-    background-color: #E8A86C;
+    background-color: #e8bd6c;
 }
 
 .menu li {
@@ -48,9 +55,11 @@ nav{
 .menu a:hover:not(.active) {
     background-color: #eec298;
 }
-
+.menu:hover{
+    cursor:pointer;
+}
 .active {
-    background-color: #E8A86C;
+    background-color: #e8bd6c;
 }
 /* END MENU */
 
@@ -62,7 +71,7 @@ nav{
     border: 1px solid #b4bec2
 }
 
-#tales{
+.tales{
     background-color: white;
 }
 
@@ -92,16 +101,6 @@ nav{
     opacity: 0.33;
     filter: alpha(opacity=40)
 }
-
-.littleimg {
-    height: 120%;
-    width: 120%
-}
-
-.logo {
-    text-indent: -999999px;
-}
-
 .padd {
     margin-top: 30px;
 }
@@ -114,17 +113,26 @@ nav{
 
 }
 
-.img60 {
-    height: 60%;
-    width: 60%;
-}
+/*modal box*/
 
 .modal-title {
     color: #D19761;
     font-weight: bold;
 }
+.modal {
+    height: 1000px;
+}
 
-/* text size in modal box*/
+
+
+
+#mark{
+    margin-top: 30px;
+}
+.mark-img{
+    width: 700px;
+}
+
 .control-label {
     font-size: 110%;
 }
@@ -140,10 +148,6 @@ nav{
 
 .space100 {
     margin-bottom: 100px;
-}
-
-.test-border {
-    border: 1px solid red;
 }
 
 .full-height {

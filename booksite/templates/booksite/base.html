@@ -36,26 +36,26 @@
         </div>
     </div>
 
-
-    <div class="menu-container">
+</div>
+<div class="menu-container">
         <nav>
                   <ul class="menu nav nav-justified">
-                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="/">Acasă</a></li>
                     
                     
-                    <li><a href="">Downloads</a></li>
-                    <li><a href="/despre_noi">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a onclick="scrolldown1()">Despre noi</a></li>
+                    <li><a onclick="scrolldown2()">O carte pentru tine</a></li>
+                    <li><a onclick="scrolldown3()">Contacte</a></li>
                   </ul>
         </nav>
-    </div>
+</div>
 
 
-    <div>
+<div>
         {% block content %}
             <h1>Insert your content here</h1>
         {% endblock %}
-    </div>
+</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -66,7 +66,7 @@
 
     {% block last %}
     {% endblock %}
-</div>
+
 
 <div style="height: 60px"></div>
 <hr>
@@ -93,4 +93,28 @@
     
 </footer>
 </body>
+
+
+ <script>
+        function scrolldown1() {
+            $('html, body').stop().animate({
+                scrollTop: $("#mark").offset().top
+            }, 1000);
+        }
+    </script>
+<script>
+        function scrolldown2() {
+            $('html, body').stop().animate({
+                scrollTop: $("#tales").offset().top
+            }, 1000);
+        }
+    </script>
+<script>
+        function scrolldown3() {
+            $('html, body').stop().animate({
+                scrollTop: $("#contact").offset().top
+            }, 1000);
+        }
+    </script>
 </html>
+

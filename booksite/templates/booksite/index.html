@@ -42,11 +42,36 @@
         </a>
     </div> <!-- Carousel -->
 
-    <div class="space100"></div>
+    <div id="mark" class="space100"></div>
+
+ <div class="container" >
+    <div class="row">
+        <div class="col-md-5 jumbotron">
+          <h1>We`ll give power to your child</h1>
+          <p class="lead">Ne place cum ei zîmbesc şi vrem să facem lumea un pic mai frumoasă. Din suflet, pentru copiii noştri.</p>
+          <p><a onclick="showDiv(); scrolldownfetele(); " class="btn btn-lg btn-success" role="button">Descoperă echipa</a></p>
+        </div>
+        <div class="col-md-7">
+            <div class="container">
+                <img class="mark-img" src="{% static 'booksite/img/mark1.jpg'%}">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="fetelespace" class="space100"></div>
+
+<div id="fetele" style="display:none;" class="container">
+    lalala
+    <img src="{% static 'booksite/img/cristina.jpg' %}">
+</div>
+
+<div id="tales" class="space100"></div>
 
 
     <!-- Three columns of text below the carousel -->
-    <div id="tales" class="row">
+    
+<div class="container">
+    <div class="row tales">
         {% for tale in tale_list %}
 
             <div class="col-lg-4 book-vertical">
@@ -65,6 +90,7 @@
 
         {% endfor %}
     </div><!-- /.row -->
+</div>
 
     <div id="taleDetailsDlg" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -74,6 +100,12 @@
         </div>
     </div>
 
+<div id="contact" class="container">
+    
+
+
+</div>
+
 {% endblock %}
 
 {% block last %}
@@ -82,6 +114,19 @@
             $('html, body').stop().animate({
                 scrollTop: $("#tales").offset().top
             }, 1000);
+        }
+    </script>
+    <script>
+        function scrolldownfetele() {
+            $('html, body').stop().animate({
+                scrollTop: $("#fetele").offset().top
+            }, 700);
+        }
+    </script>
+
+    <script>
+        function showDiv() {
+            document.getElementById('fetele').style.display = "block";
         }
     </script>
 {% endblock %}

@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bookit</title>
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -16,47 +15,39 @@
 
     <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 </head>
 
-<body style="background-image: url("C:/bookit/booksite/static/booksite/img/clouds.gif")">
+<body>
 
-<div class="container">
+<div class="container" id="container">
     <div class="row">
         <div class="col-md-3">
             <a class="nolink" href="{% url 'tale_list' %}">
                 <img src="{% static 'booksite/img/logotransp.png' %}" class="littleimg logo">
             </a>
         </div>
+        <div class="col-md-7">
+
+        </div>
         <div class="col-md-1">
-
-            <div class="row">
-
-                <div class="col-md-3">
-                    <img src="{% static 'booksite/img/logotransp.png' %}" class="littleimg logo">
-                </div>
-                <div class="col-md-6">
-                </div>
-                <div class="col-md-1">
-                    <a href="#">RO</a>
-                </div>
-                <div class="col-md-2">
-                    <a href="#">LOGIN</a>
-                </div>
-
-            </div>
-
-
+            
+            <span class="flag-icon flag-icon-ro"></span>           
         </div>
     </div>
 
 
     <div class="menu-container">
-        <ul class="menu">
-            <li><a class="active" href="#"><h4>Despre noi</h4></a></li>
-            <li><a href="#"><h4>Galerie</h4></a></li>
-            <li><a href="#"><h4>Creează cartea</h4></a></li>
-            <li><a href="#"><h4>Contacte</h4></a></li>
-        </ul>
+        <nav>
+                  <ul class="menu nav nav-justified">
+                    <li class="active"><a href="/">Home</a></li>
+                    
+                    
+                    <li><a href="">Downloads</a></li>
+                    <li><a href="/despre_noi">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+        </nav>
     </div>
 
 
@@ -76,5 +67,30 @@
     {% block last %}
     {% endblock %}
 </div>
+
+<div style="height: 60px"></div>
+<hr>
+<footer>
+    <div id="footer" class="container">
+        <div id="footer-cont" class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h5>Copyright &copy; "Bookit" 2016</h5>                    
+                </div>
+                <div class="col-md-2">
+                    <h4>Follow us on</h4>
+                </div>
+                <div class="col-sm-1">
+                    <a target="_blank" title="find us on Facebook" href="http://www.facebook.com/bookitmd"><img alt="follow me on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0></a>
+                </div>
+                <div class="col-sm-1">
+                    <a target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter_30x30.png" border=0></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 100px"></div>
+    
+</footer>
 </body>
 </html>

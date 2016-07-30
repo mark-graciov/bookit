@@ -81,6 +81,8 @@ def download_tale(request, s_id):
     return render(request, 'booksite/download_tale.html', {'tale': tale, 's_id': s_id})
 
 
+
+
 def download_tale_doc(request, s_id):
     s_tuple = request.session[s_id]
     tale = Tale.objects.get(pk=s_tuple[0])
@@ -93,3 +95,6 @@ def download_tale_doc(request, s_id):
     response['Content-Length'] = file.tell()
     file.seek(0)
     return response
+
+def despre_noi(request):
+    return render(request, 'booksite/despre_noi.html', )

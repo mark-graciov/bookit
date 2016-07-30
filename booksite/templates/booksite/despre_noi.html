@@ -2,24 +2,15 @@
 
 {% block content %}
 
-	<div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Project name</h3>
-      </div>
+	
 
       <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <h2>We are going to give power to your child</h2>
+        <p class="lead">Ne place cum ei zîmbesc şi vrem să facem lumea un pic mai frumoasă. Din suflet, pentru copiii noştri.</p>
+        <p><a onclick="scrolldown()" class="btn btn-lg btn-success" role="button">Descoperă echipa</a></p>
       </div>
 
-      <div class="row marketing">
+      <div id="echipa" class="row marketing">
         <div class="col-lg-6">
           <h4>Subheading</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
@@ -55,6 +46,14 @@
 
 
 
+{% endblock %}
 
-
+{% block last %}
+    <script>
+        function scrolldown() {
+            $('html, body').stop().animate({
+                scrollTop: $("#echipa").offset().top
+            }, 1000);
+        }
+    </script>
 {% endblock %}

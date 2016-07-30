@@ -1,14 +1,39 @@
+body {
+    font-family: "Times New Roman";
+}
+
 /* MENU */
+body{
+    background-size: 39%;
+    background-image: url("img/clouds.gif");
+    background-repeat: repeat;
+}
+nav{
+    font-family: 'Lucida Console';
+    font-size: 14pt;
+    font-style: bold;
+}
+#container{
+    width: 1000px;
+}
+
+/* languages */
+.flag-icon-ro {
+    background-image: url(../flags/1x1/ro.svg);
+}
+
 .menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    
     overflow: hidden;
     background-color: #E8A86C;
 }
 
 .menu li {
     float: left;
+
+}
+.navbar-justified{
+
 }
 
 .menu a {
@@ -16,13 +41,12 @@
     color: white;
     text-align: center;
     padding: 3px 4px;
-    margin-left: 90px;
-    margin-right: 90px;
+    
     text-decoration: none;
 }
 
 .menu a:hover:not(.active) {
-    background-color: #e4e4e4;
+    background-color: #eec298;
 }
 
 .active {
@@ -38,13 +62,15 @@
     border: 1px solid #b4bec2
 }
 
+#tales{
+    background-color: white;
+}
+
 .create-form {
     padding: 20px;
 }
 
-.body {
-    background-image: url('../img/nuage1.png');
-}
+
 
 .header2 {
     background-color: #ffffff;
@@ -68,8 +94,8 @@
 }
 
 .littleimg {
-    height: 100%;
-    width: 100%
+    height: 120%;
+    width: 120%
 }
 
 .logo {
@@ -215,3 +241,19 @@
 
 /* CSS for '#despre_noi' template*/
 
+
+
+
+
+footer { 
+    display: block;
+    
+
+}
+#footer{
+    width: 1000px;
+
+}
+#footer-cont{
+    margin: 30px;
+}

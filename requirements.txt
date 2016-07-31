@@ -2,7 +2,7 @@ Django==1.9.7
 django-widget-tweaks==1.4.1
 gunicorn==19.6.0
 lxml==3.6.0
-psycopg==2.6.2
+psycopg==2.5.4
 python-docx==0.8.5
 whitenoise==3.2
 

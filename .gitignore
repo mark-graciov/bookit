@@ -4,6 +4,10 @@ __pycache__/
 .idea/
 *.iml
 
+
+venv/
+
+venv
 *.pyc
 staticfiles
-venv/
+.env
